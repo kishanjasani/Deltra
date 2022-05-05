@@ -1,0 +1,2 @@
+# Deltra
+WordPress theme
