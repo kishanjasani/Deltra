@@ -28,6 +28,7 @@
 namespace DELTRA\Inc\Traits;
 
 trait Singleton {
+
 	/**
 	 * Protected class constructor to prevent direct object creation
 	 *

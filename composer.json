@@ -1,25 +1,39 @@
 {
 	"name": "kishan/deltra",
 	"description": "A Beautiful WordPress theme",
+	"type": "wordpress-theme",
 	"license": "GPL-3.0+",
-	"version": "1.0.0",
 	"authors": [
 		{
 			"name": "Kishan Jasani",
-			"email": "kishanjasani007@yahoo.in"
+			"email": "kishanjasani007@yahoo.in",
+			"role": "Developer"
 		}
 	],
 	"keywords": [
 		"WordPress",
 		"WordPress Theme"
 	],
+	"support": {
+		"issues": "https://github.com/kishanjasani/Deltra/issues",
+		"source": "https://github.com/kishanjasani/Deltra"
+	},
 	"require": {
 		"php": ">=5.4.0"
+	},
+	"require-dev": {
+		"wp-coding-standards/wpcs": "^2.3",
+		"phpcompatibility/phpcompatibility-wp": "^2.1"
 	},
 	"autoload": {
 		"psr-4": {
 			"DELTRA\\Inc\\": "inc/classes/",
 			"DELTRA\\Inc\\Traits\\": "inc/traits/"
+		}
+	},
+	"config": {
+		"allow-plugins": {
+			"dealerdirect/phpcodesniffer-composer-installer": true
 		}
 	}
 }

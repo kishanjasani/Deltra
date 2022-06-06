@@ -5,8 +5,10 @@
  * @package Deltra
  */
 
+use DELTRA\Inc\DeltraTheme;
+
 if ( ! defined( 'DELTRA_THEME_VERSION' ) ) {
-	define( 'DELTRA_THEME_VERSION', 1.0 );
+	define( 'DELTRA_THEME_VERSION', wp_get_theme()->get( 'Version' ) );
 }
 
 if ( ! defined( 'DELTRA_DIR_PATH' ) ) {
@@ -33,7 +35,7 @@ require_once DELTRA_DIR_PATH . '/vendor/autoload.php';
  * @return object DELTRA\Inc\Deltra_Theme
  */
 function deltra_get_theme_instance() {
-	return DELTRA\Inc\DeltraTheme::get_instance();
+	return DeltraTheme::get_instance();
 }
 
 deltra_get_theme_instance();

@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<ruleset name="Deltra-Default">
+
+	<rule ref="WordPress-Docs">
+		<exclude-pattern>tests/*</exclude-pattern>
+	</rule>
+	<rule ref="WordPress-Extra">
+		<!-- Forget about file names -->
+		<exclude name="WordPress.Files.FileName"/>
+
+		<!-- Allow same line control structures e.g. if ( true ) { echo 1; } -->
+		<exclude name="Squiz.ControlStructures.ControlSignature.NewlineAfterOpenBrace"/>
+
+		<!-- Allow empty catch statements -->
+		<exclude name="Generic.CodeAnalysis.EmptyStatement.DetectedCatch"/>
+
+		<!-- Allow shorthand array syntax -->
+		<exclude name="Generic.Arrays.DisallowShortArraySyntax.Found"/>
+
+		<!-- Allow WP global modification -->
+		<exclude name="WordPress.WP.GlobalVariablesOverride.Prohibited"/>
+
+		<!-- This nonce sniff almost never works right -->
+		<exclude name="WordPress.Security.NonceVerification.Missing"/>
+	</rule>
+
+		<!-- Make missing translator comment a warning. -->
+	<rule ref="WordPress.WP.I18n.MissingTranslatorsComment">
+		<type>warning</type>
+	</rule>
+
+	<rule ref="WordPress.Files.FileName.InvalidClassFileName">
+		<exclude-pattern>tests/*</exclude-pattern>
+		<exclude-pattern>src/*</exclude-pattern>
+	</rule>
+
+	<!-- Sometimes we need to override globals -->
+	<rule ref="WordPress.WP.GlobalVariablesOverride.OverrideProhibited">
+		<type>warning</type>
+	</rule>
+
+	<rule ref="WordPress.WP.AlternativeFunctions">
+		<exclude-pattern>bin/*</exclude-pattern>
+	</rule>
+	<rule ref="WordPress.Files.FileName.NotHyphenatedLowercase">
+		<exclude-pattern>src/*</exclude-pattern>
+	</rule>
+
+	<!-- Limit max. consecutive blank lines to 1 instead of 2. -->
+	<rule ref="Squiz.WhiteSpace.FunctionSpacing">
+		<properties>
+			<property name="spacing" value="1"/>
+			<property name="spacingBeforeFirst" value="1"/>
+			<property name="spacingAfterLast" value="0"/>
+		</properties>
+	</rule>
+
+	<!-- Don't worry about files that don't contain any code -->
+	<rule ref="Internal.NoCodeFound">
+		<severity>0</severity>
+	</rule>
+
+	<!-- Loads the PHP Compatibility ruleset. -->
+	<rule ref="PHPCompatibilityWP" />
+
+	<!-- Ignore mixed line-endings warnings -->
+	<rule ref="Internal.LineEndings.Mixed">
+		<severity>0</severity>
+	</rule>
+
+	<!-- Internal exceptions (often occur on minified files) -->
+	<rule ref="Internal.Tokenizer.Exception">
+		<severity>0</severity>
+	</rule>
+
+	<!-- For CI, don't fail on warnings -->
+	<config name="ignore_warnings_on_exit" value="1"/>
+
+	<arg value="s"/>
+	<arg name="extensions" value="php"/>
+	<file>.</file>
+
+	<!-- Strip the filepaths down to the relevant bit. -->
+	<arg name="basepath" value="./"/>
+
+	<!-- Check up to 20 files simultaneously. -->
+	<arg name="parallel" value="20"/>
+
+	<exclude-pattern type="relative">assets/build/*</exclude-pattern>
+	<exclude-pattern type="relative">^logs/*</exclude-pattern>
+	<exclude-pattern>/assets/build/js/*.asset.php</exclude-pattern>
+	<exclude-pattern>*/phpunit.xml*</exclude-pattern>
+	<exclude-pattern>*/languages/*</exclude-pattern>
+	<exclude-pattern>*/tests/*</exclude-pattern>
+
+	<!-- Third-party code -->
+	<exclude-pattern>*/bower-components/*</exclude-pattern>
+	<exclude-pattern>*/node_modules/*</exclude-pattern>
+	<exclude-pattern>*/vendor/*</exclude-pattern>
+
+</ruleset>

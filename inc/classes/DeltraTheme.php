@@ -138,5 +138,4 @@ class DeltraTheme {
 		// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
 		$GLOBALS['content_width'] = apply_filters( 'deltra_content_width', 1240 );
 	}
-
 }
