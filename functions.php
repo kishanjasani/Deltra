@@ -25,7 +25,7 @@ if ( ! defined( 'DELTRA_BUILD_PATH' ) ) {
 	define( 'DELTRA_BUILD_PATH', untrailingslashit( get_template_directory() ) . '/assets/build' );
 }
 
-require_once DELTRA_DIR_PATH . '/inc/helpers/autoloader.php';
+require_once DELTRA_DIR_PATH . '/vendor/autoload.php';
 
 /**
  * Get deltra theme instance.
@@ -33,7 +33,7 @@ require_once DELTRA_DIR_PATH . '/inc/helpers/autoloader.php';
  * @return object DELTRA\Inc\Deltra_Theme
  */
 function deltra_get_theme_instance() {
-	return DELTRA\Inc\Deltra_Theme::get_instance();
+	return DELTRA\Inc\DeltraTheme::get_instance();
 }
 
 deltra_get_theme_instance();

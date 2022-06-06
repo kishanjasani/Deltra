@@ -28,7 +28,6 @@ class Assets {
 	 * @return void
 	 */
 	protected function setup_hooks() {
-
 		/**
 		 * Actions
 		 */
@@ -44,7 +43,7 @@ class Assets {
 	 */
 	public function register_scripts() {
 		// Register Scripts.
-		wp_register_script( 'main', DELTRA_DIR_URI . '/assets/js/main.js', [], filemtime( DELTRA_DIR_PATH . '/assets/js/main.js' ), true );
+		wp_register_script( 'main', DELTRA_DIR_URI . '/assets/src/js/main.js', [], filemtime( DELTRA_DIR_PATH . '/assets/src/js/main.js' ), true );
 		wp_register_script( 'bootstrap', DELTRA_DIR_URI . '/assets/src/library/js/bootstrap.min.js', [ 'jquery' ], false, true );
 
 		// Enqueue Scripts.

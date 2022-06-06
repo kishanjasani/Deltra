@@ -1,0 +1,25 @@
+{
+	"name": "kishan/deltra",
+	"description": "A Beautiful WordPress theme",
+	"license": "GPL-3.0+",
+	"version": "1.0.0",
+	"authors": [
+		{
+			"name": "Kishan Jasani",
+			"email": "kishanjasani007@yahoo.in"
+		}
+	],
+	"keywords": [
+		"WordPress",
+		"WordPress Theme"
+	],
+	"require": {
+		"php": ">=5.4.0"
+	},
+	"autoload": {
+		"psr-4": {
+			"DELTRA\\Inc\\": "inc/classes/",
+			"DELTRA\\Inc\\Traits\\": "inc/traits/"
+		}
+	}
+}
