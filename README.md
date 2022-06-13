@@ -22,7 +22,7 @@ themes directory and activate it.
 Clone the repo and run
 
 ```bash
-cd deltra/assets
+cd deltra
 npm install
 ```
 
@@ -35,7 +35,7 @@ npm run dev
 Run precommit from assets directory before pushing the code for development/contribution.
 
 ```
-cd assets && npm run precommit
+npm run precommit
 ```
 
 **Production**
