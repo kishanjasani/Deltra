@@ -36,6 +36,7 @@ trait Singleton {
 	 * this trait. This is ideal for doing stuff that you only want to
 	 * do once, such as hooking into actions and filters, etc.
 	 */
+
 	protected function __construct() {
 	}
 

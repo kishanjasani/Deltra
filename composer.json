@@ -1,6 +1,6 @@
 {
 	"name": "kishan/deltra",
-	"description": "A Beautiful WordPress theme",
+	"description": "A Beautiful WordPress theme packages",
 	"type": "wordpress-theme",
 	"license": "GPL-3.0+",
 	"authors": [
@@ -19,11 +19,15 @@
 		"source": "https://github.com/kishanjasani/Deltra"
 	},
 	"require": {
-		"php": ">=5.4.0"
+		"php": ">=7"
 	},
 	"require-dev": {
 		"wp-coding-standards/wpcs": "^2.3",
 		"phpcompatibility/phpcompatibility-wp": "^2.1"
+	},
+	"scripts" : {
+		"phpcs": "vendor/bin/phpcs",
+		"phpcbf": "vendor/bin/phpcbf"
 	},
 	"autoload": {
 		"psr-4": {
