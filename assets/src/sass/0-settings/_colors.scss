@@ -1,0 +1,63 @@
+/*---------------------------------
+		Colors Variables
+-----------------------------------*/
+
+$black: #000;
+$white: #fff;
+
+$gray-200: #ccc;
+$gray-100: #eff3f6;
+
+$dark-gray-200: #333;
+$dark-gray-100: #424242;
+
+$red-100: #d32f2f;
+
+$colors: (
+	"black": $black,
+	"white": $white,
+	"gray-200": $gray-200,
+	"gray-100": $gray-100,
+	"dark-gray-200": $dark-gray-200,
+	"dark-gray-100": $dark-gray-100,
+	"red-100": $red-100,
+);
+
+/*---------------------------------
+		Element Colors
+-----------------------------------*/
+
+// <body>
+$color__body-text: $dark-gray-100;
+$color__background-body: $white;
+
+// <a>
+$color__link: $dark-gray-100;
+$color__link-hover: $red-100;
+
+// <button>, input[type="button"], input[type="reset"], input[type="submit"]
+$color__background-button: $gray-100;
+$color__background-button-hover: $gray-100;
+$color__border-button: $dark-gray-200;
+$color__border-button-hover: $black;
+
+// input[type="text"], input[type="email"], input[type="url"],
+// input[type="password"], input[type="search"], input[type="tel"], textarea
+$color__border-input: $gray-100;
+$color__text-input: $dark-gray-200;
+$color__text-input-focus: $black;
+
+// <pre>, <code>
+$color__background-pre: $gray-100;
+
+// <hr>
+$color__background-hr: $gray-100;
+
+/*---------------------------------
+		Border Colors
+-----------------------------------*/
+
+$color__border-light: $gray-100;
+$color__border-fieldset: $gray-200;
+$color__border-table: $gray-200;
+$color__border-blockquote: $black;
